@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artwork – ReminderOfMyLove</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container fade-in">
+    <h1>Artwork for You</h1>
+    <p class="intro">These are pieces of my heart turned into lines and color, all for you.</p>
+    <div class="gallery">
+      <img src="C:\Users\gamin\Downloads\ReminderOfMyLove\flowers.png" alt="Art 1" class="zoomable">
+      <img src="images/art2.jpg" alt="Art 2" class="zoomable">
+      <img src="images/art3.jpg" alt="Art 3" class="zoomable">
+    </div>
+    <nav>
+      <a href="index.html">Home</a> | 
+      <a href="poems.html">Poems</a> | 
+      <a href="letters.html">Letters</a>
+    </nav>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" id="lightbox-img">
+  </div>
+
+  <script>
+    const zoomables = document.querySelectorAll('.zoomable');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    zoomables.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
