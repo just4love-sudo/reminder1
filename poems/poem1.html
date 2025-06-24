@@ -18,6 +18,14 @@
       line-height: 1.9;
       background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
       background-size: cover;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     .poem-container {
@@ -48,6 +56,27 @@
       border: none;
       height: 1px;
       background: linear-gradient(to right, transparent, #666, transparent);
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 2rem auto 0;
+      padding: 0.6rem 1.4rem;
+      font-size: 1rem;
+      color: #e0e0e0;
+      background-color: transparent;
+      border: 1px solid #999;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    .back-button:hover {
+      background-color: #444;
+      color: #fff;
+      border-color: #bbb;
     }
   </style>
 </head>
@@ -103,6 +132,7 @@ But it just is.
 And if she’s not here...
 How am I supposed to survive?
     </p>
+    <a href="/poems.html" class="back-button">← Back to Poems</a>
   </div>
 </body>
 </html>
