@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>If You Ever Forgot</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Cormorant Garamond', serif;
-      color: #f2f2f2;
+      color: #f1f1f1;
+      background: linear-gradient(to bottom, #0d0d1a 0%, #1c1c3c 100%);
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-size: repeat;
+      background-blend-mode: overlay;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       line-height: 2;
-      background: linear-gradient(to bottom, #c2c2c2 0%, #a4a4b5 50%, #606080 100%);
-      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      background-blend-mode: soft-light;
-      background-size: cover;
       animation: fadeIn 2s ease forwards;
       opacity: 0;
     }
@@ -31,24 +35,25 @@
 
     .poem-container {
       max-width: 800px;
-      background-color: rgba(255, 255, 255, 0.05);
+      background: rgba(20, 20, 30, 0.8);
       padding: 3rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(6px);
       text-align: left;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin-bottom: 2rem;
-      color: #ffe0e0;
+      color: #ffd4d4;
     }
 
     p {
       white-space: pre-wrap;
       font-size: 1.3rem;
+      margin-bottom: 1rem;
     }
 
     .back-button {
@@ -57,7 +62,7 @@
       margin: 2rem auto 0;
       padding: 0.6rem 1.4rem;
       font-size: 1rem;
-      color: #eee;
+      color: #f1f1f1;
       background-color: transparent;
       border: 1px solid #aaa;
       border-radius: 8px;
@@ -67,9 +72,9 @@
     }
 
     .back-button:hover {
-      background-color: #ccc;
-      color: #333;
-      border-color: #999;
+      background-color: #ffffff11;
+      border-color: #ccc;
+      color: #ffffff;
     }
   </style>
 </head>
