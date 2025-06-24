@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>A Letter – If This Is Goodbye</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=EB+Garamond&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>If This Is Goodbye</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #f5f1ee;
-      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
       font-family: 'EB Garamond', serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 2;
+      color: #fdfdfd;
       animation: fadeIn 2s ease forwards;
       opacity: 0;
-      color: #3b2f2f;
     }
 
     @keyframes fadeIn {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
 
     .letter-container {
-      background-color: #fff9f6;
-      padding: 3rem 2.5rem;
-      max-width: 800px;
-      width: 90%;
+      background-color: rgba(30, 30, 30, 0.75);
+      padding: 3rem 2rem;
       border-radius: 16px;
-      box-shadow: 0 0 20px rgba(160, 130, 130, 0.2);
-      border: 1px solid #e6dcd8;
+      max-width: 800px;
+      margin: 2rem;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      text-align: center;
       font-size: 2.5rem;
-      color: #aa6f73;
+      color: #ffdfd6;
+      text-align: center;
       margin-bottom: 2rem;
     }
 
     p {
-      font-size: 1.2rem;
-      line-height: 2;
       white-space: pre-wrap;
+      font-size: 1.2rem;
       margin-bottom: 1.2rem;
-    }
-
-    .signature {
-      text-align: right;
-      font-style: italic;
-      margin-top: 2rem;
     }
 
     .back-button {
       display: block;
       text-align: center;
       margin-top: 2rem;
-      padding: 0.5rem 1.4rem;
+      padding: 0.6rem 1.4rem;
       font-size: 1rem;
-      color: #633e42;
-      border: 1px solid #c5a6a6;
-      border-radius: 8px;
+      color: #fff;
       background-color: transparent;
+      border: 1px solid #ccc;
+      border-radius: 8px;
       text-decoration: none;
       transition: all 0.3s ease;
       width: fit-content;
@@ -73,9 +71,8 @@
     }
 
     .back-button:hover {
-      background-color: #f3e3e3;
-      color: #432d2d;
-      border-color: #d1b5b5;
+      background-color: #ffffff22;
+      border-color: #eee;
     }
   </style>
 </head>
@@ -84,7 +81,7 @@
     <h1>If This Is Goodbye</h1>
     <p>
 If this is the last thing I ever say to you,  
-if you read this and walk away forever...  
+if you read this and walk away forever.  
 then please… let it stay with you.  
 Not as a guilt, not as a weight.  
 But as proof. That I loved you.  
@@ -136,7 +133,7 @@ I won’t lie.
 There’s no moving on from someone like you.  
 Not for me.  
 I’ll keep waking up,  
-but it won’t be living 
+but it won’t be living  
 just waiting.  
 Waiting for time to forget me,  
 for life to wear me down quietly.
@@ -165,7 +162,6 @@ All the best.
 I love you.  
 Mwah.
     </p>
-    <div class="signature">– Always, still yours</div>
     <a href="/letters.html" class="back-button">← Back to Letters</a>
   </div>
 </body>
