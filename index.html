@@ -1,76 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>ReminderOfMyLove</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #3b2f2f, #1a1a1a);
-      color: #f4f4f4;
-      font-family: 'EB Garamond', serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      line-height: 1.8;
-      background-image: url('https://www.transparenttextures.com/patterns/old-moon.png');
-      background-size: cover;
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    .container {
-      max-width: 800px;
-      padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
-
-    h1 {
-      font-size: 2rem;
-      text-align: center;
-      color: #ffe0e0;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
-      white-space: pre-wrap;
-    }
-
-    nav {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: #ffdfc4;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffcaa6;
-    }
-
     .music-message {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       text-align: center;
+      margin-top: 4rem;
       margin-bottom: 2rem;
     }
 
@@ -92,9 +33,9 @@
     }
 
     .apology {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #666;
       font-style: italic;
     }
   </style>
@@ -105,36 +46,15 @@
     Your browser does not support the audio element.
   </audio>
 
-  <div class="container">
+  <div class="container fade-in">
     <div class="music-message">
-      <button id="music-toggle">
-        This is the song that plays in my head when it comes to you. I love you. Click to play.
+      <button id="music-toggle">This is the song that plays in my head when it comes to you. I love you. Click to play.
       </button>
       <p class="apology">I'm sorry it won't keep playing on other pages... I'm not good enough to make that work yet.</p>
     </div>
 
     <h1>Welcome to My Little Home of Love Built Just for You</h1>
-    <p>
-Hey, my heart. If you’re reading this, then you’ve just stepped into something very close to my heart.
-
-This may not be perfect, or grand, or even impressive by anyone else's standards but to me, this is everything, for you, are my everything. I made this space for you. A quiet corner of the internet, a little world of our own.
-
-Because I don't know how else to show just how much you mean to me. And I know... this might seem a bit strange or even silly. But for someone like me, who’s not always the best at expressing love, this is how I try.
-
-Every day, I feel like time is moving too fast. Like I’m forgetting things I never thought I would. Even the recent memories — our conversations, your laugh, little moments — sometimes slip away from me. I used to have such a sharp memory. But maybe life, trauma, stress.. or the accident chipped away at that part of me.
-
-Still, what I don’t ever want to lose is you. I don’t have fancy gifts, or a perfect way with words, or a guide on how to love someone over a screen. But I do have this heart that cares more than it knows how to say. So I turned that love into this space.
-
-Here, you’ll find pieces of me. Poems I wrote while thinking of you. Letters I was too shy to send. Art that carries fragments of my love. Moments frozen so they’ll never be lost.
-
-This isn’t just a website. It’s a love story. A memory vault. A quiet hug for the days you need comfort.
-
-So whenever you miss me, whenever things get hard, whenever the world feels a little too heavy—come here. Click around. Read, smile, cry if you need to. This place will always be open, just like my heart is for you.
-
-I love you. In all the ways I struggle to say.
-And this... this is me trying.
-Welcome home.
-    </p>
+    <p>Hey, my heart. If you’re reading this, then you’ve just stepped into something very close to my heart. This may not be perfect, or grand, or even impressive by anyone else's standards but to me, this is everything, for you, are my everything. I made this space for you. A quiet corner of the internet, a little world of our own. Because I don't know how else to show just how much you mean to me. And I know... this might seem a bit strange or even silly. But for someone like me, who’s not always the best at expressing love, this is how I try. Every day, I feel like time is moving too fast. Like I’m forgetting things I never thought I would. Even the recent memories our conversations, your laugh, little moments sometimes slip away from me. I used to have such a sharp memory. But maybe life, trauma, stress.. or the accident chipped away at that part of me. Still, what I don’t ever want to lose is you. I don’t have fancy gifts, or a perfect way with words, or a guide on how to love someone over a screen. But I do have this heart that cares more than it knows how to say. So I turned that love into this space. Here, you’ll find pieces of me. Poems I wrote while thinking of you. Letters I was too shy to send. Art that carries fragments of my love. Moments frozen so they’ll never be lost. This isn’t just a website. It’s a love story. A memory vault. A quiet hug for the days you need comfort. So whenever you miss me, whenever things get hard, whenever the world feels a little too heavy—come here. Click around. Read, smile, cry if you need to. This place will always be open, just like my heart is for you. I love you. In all the ways I struggle to say. And this... this is me trying.<br> Welcome home.</p>
 
     <nav>
       <a href="poems.html">Poems</a> |
@@ -146,17 +66,17 @@ Welcome home.
   <script>
     const music = document.getElementById('bg-music');
     const toggle = document.getElementById('music-toggle');
-    let playing = false;
-
     toggle.addEventListener('click', () => {
-      if (!playing) {
-        music.play();
-        toggle.textContent = "⏸ Pause";
-        playing = true;
-      } else {
-        music.pause();
-        toggle.textContent = "▶ Play";
-        playing = false;
+      music.play();
+      toggle.textContent = "⏸ Pause";
+      toggle.onclick = () => {
+        if (music.paused) {
+          music.play();
+          toggle.textContent = "⏸ Pause";
+        } else {
+          music.pause();
+          toggle.textContent = "▶ Play";
+        }
       }
     });
   </script>
