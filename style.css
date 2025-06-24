@@ -167,3 +167,152 @@ nav a:hover {
 .art-grid img:hover {
   transform: scale(1.05);
 }
+.floating-svg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-svg svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -40px; /* start slightly above screen */
+  opacity: 0.5;
+  animation: floatSvg linear infinite;
+}
+
+@keyframes floatSvg {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.side-decor {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.side-decor.left {
+  left: 0;
+  background: url('data:image/svg+xml;utf8,<svg fill="pink" viewBox="0 0 100 800" xmlns="http://www.w3.org/2000/svg"><path d="M50 0 Q70 100 30 200 Q70 300 30 400 Q70 500 30 600 Q70 700 50 800"/></svg>') repeat-y;
+  background-size: contain;
+}
+
+.side-decor.right {
+  right: 0;
+  background: url('data:image/svg+xml;utf8,<svg fill="pink" viewBox="0 0 100 800" xmlns="http://www.w3.org/2000/svg"><path d="M50 0 Q30 100 70 200 Q30 300 70 400 Q30 500 70 600 Q30 700 50 800"/></svg>') repeat-y;
+  background-size: contain;
+}
+.sparkle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 5;
+  background: radial-gradient(white, transparent);
+  animation: sparkleFade 1s ease-out forwards;
+  opacity: 0.8;
+}
+
+@keyframes sparkleFade {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+.love-note {
+  position: fixed;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #f7accf;
+  opacity: 0;
+  animation: floatNote 14s ease-in-out infinite;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+  max-width: 160px;
+  text-shadow: 0 0 2px #f5b7c2;
+}
+
+@keyframes floatNote {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateY(-50px); opacity: 0; }
+}
+
+.glow-orb {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffcce0 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.glow-orb.top-left { top: 0; left: 0; }
+.glow-orb.bottom-right { bottom: 0; right: 0; }
+
+/*butterflies*/
+.butterfly {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+  animation: butterflyFloat 18s ease-in-out infinite;
+}
+
+@keyframes butterflyFloat {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-60px) translateX(80px) rotate(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) translateX(160px) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+/* decorative container*/
+.side-deco {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  opacity: 0.07;
+  background-repeat: repeat-y;
+  background-size: 80px auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.side-deco.left {
+  left: 100px; /* adjust to stay between vine and content */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23f7accf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 512"><path d="M32 32c0-8 16-8 16 0s-16 24-16 32 16 24 16 32-16 24-16 32 16 24 16 32-16 24-16 32 16 24 16 32-16 24-16 32 16 24 16 32-16 24-16 32"/></svg>');
+}
+
+.side-deco.right {
+  right: 100px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23f7accf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 512"><path d="M32 32c0-8 16-8 16 0s-16 24-16 32 16 24 16 32-16 24-16 32 16 24 16 32-16 24-16 32 16 24 16 32-16 24-16 32 16 24 16 32-16 24-16 32"/></svg>');
+}
