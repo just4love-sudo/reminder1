@@ -8,7 +8,9 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(#2c2c2c, #1a1a1a);
+      background: radial-gradient(ellipse at top, #3b3b58 0%, #1a1a2f 100%);
+      background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
+      background-blend-mode: overlay;
       color: #e0e0e0;
       font-family: 'Cormorant Garamond', serif;
       display: flex;
@@ -16,10 +18,9 @@
       justify-content: center;
       min-height: 100vh;
       line-height: 1.9;
-      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
-      background-size: cover;
       animation: fadeIn 2s ease forwards;
       opacity: 0;
+      background-size: cover;
     }
 
     @keyframes fadeIn {
@@ -30,10 +31,10 @@
 
     .poem-container {
       max-width: 800px;
-      background-color: rgba(40, 40, 40, 0.85);
+      background-color: rgba(30, 30, 45, 0.9);
       padding: 3rem 2rem;
       border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
       text-align: left;
     }
 
@@ -41,7 +42,7 @@
       text-align: center;
       font-size: 2.7rem;
       margin-bottom: 2rem;
-      color: #c9a3a3;
+      color: #d6a4a4;
       font-weight: 600;
     }
 
@@ -49,13 +50,6 @@
       white-space: pre-wrap;
       margin-bottom: 1.2rem;
       font-size: 1.3rem;
-    }
-
-    .fade-line {
-      margin: 2rem 0;
-      border: none;
-      height: 1px;
-      background: linear-gradient(to right, transparent, #666, transparent);
     }
 
     .back-button {
