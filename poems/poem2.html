@@ -5,75 +5,77 @@
   <title>The Space Between Calls</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(#1e1e1e, #121212);
-      color: #e0e0e0;
-      font-family: 'Cormorant Garamond', serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      line-height: 1.9;
-      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
-      background-size: cover;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #0f0f1a;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'),
+                      radial-gradient(ellipse at center, #1b1b2f 0%, #0f0f1a 100%);
+    background-size: cover;
+    color: #e0e0e0;
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    line-height: 1.9;
+  }
 
-    .poem-container {
-      max-width: 800px;
-      background-color: rgba(30, 30, 30, 0.9);
-      padding: 3rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-      text-align: left;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1.5s ease forwards;
-    }
+  .poem-container {
+    max-width: 800px;
+    background-color: rgba(20, 20, 30, 0.85);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease forwards;
+  }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: #d6a4a4;
-      font-weight: 600;
-    }
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #d0aeb1;
+    font-weight: 600;
+  }
 
-    p {
-      white-space: pre-wrap;
-      margin-bottom: 1.2rem;
-      font-size: 1.3rem;
-    }
+  p {
+    white-space: pre-wrap;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+  }
 
-    .back-button {
-      display: block;
-      text-align: center;
-      margin: 2rem auto 0;
-      padding: 0.6rem 1.4rem;
-      font-size: 1rem;
-      color: #e0e0e0;
-      background-color: transparent;
-      border: 1px solid #999;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      width: fit-content;
-    }
+  .back-button {
+    display: block;
+    text-align: center;
+    margin: 2rem auto 0;
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+    color: #e0e0e0;
+    background-color: transparent;
+    border: 1px solid #999;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+  }
 
-    .back-button:hover {
-      background-color: #444;
-      color: #fff;
-      border-color: #bbb;
-    }
-  </style>
+  .back-button:hover {
+    background-color: #444;
+    color: #fff;
+    border-color: #bbb;
+  }
+</style>
+
 </head>
 <body>
   <div class="poem-container">
